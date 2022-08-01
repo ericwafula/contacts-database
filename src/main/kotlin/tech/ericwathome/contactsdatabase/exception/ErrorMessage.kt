@@ -1,8 +1,8 @@
 package tech.ericwathome.contactsdatabase.exception
 
-import org.springframework.web.bind.annotation.ResponseStatus
+import org.springframework.http.HttpStatus
 
 class ErrorMessage(
-    val status: ResponseStatus,
-    val message: String
+    val status: HttpStatus,
+    val message: String?
 )

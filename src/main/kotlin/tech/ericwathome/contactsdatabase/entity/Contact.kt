@@ -9,7 +9,7 @@ import javax.persistence.Id
 @Entity
 data class Contact(
     @GeneratedValue(strategy = GenerationType.AUTO)
-    @Id val id: Long,
+    @Id val id: Long? = null,
     val firstName: String,
     val lastName: String,
     val location: String,
