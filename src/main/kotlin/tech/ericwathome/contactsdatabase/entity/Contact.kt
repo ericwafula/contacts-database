@@ -10,10 +10,10 @@ import javax.persistence.Id
 data class Contact(
     @GeneratedValue(strategy = GenerationType.AUTO)
     @Id val id: Long? = null,
-    val firstName: String,
-    val lastName: String,
-    val location: String,
-    val phoneNumber: String
+    var firstName: String,
+    var lastName: String,
+    var address: String,
+    var phoneNumber: String
 ) {
     override fun equals(other: Any?): Boolean {
         if (this === other) return true
@@ -27,6 +27,6 @@ data class Contact(
 
     @Override
     override fun toString(): String {
-        return this::class.simpleName + "(id = $id , firstName = $firstName , lastName = $lastName , location = $location , phoneNumber = $phoneNumber )"
+        return this::class.simpleName + "(id = $id , firstName = $firstName , lastName = $lastName , location = $address , phoneNumber = $phoneNumber )"
     }
 }
